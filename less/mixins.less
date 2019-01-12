@@ -1,1 +1,34 @@
 // Mixins in here
+
+//allows you to set a specific dashed silver border with the parameter being where to put it
+//e.g. border-top
+.dashed-border(@border-loc; @border-color) {
+  @{border-loc}: 2px dashed @border-color;
+}
+
+.flex(@justify: space-between) {
+  display: flex;
+  justify-content: @justify;
+}
+
+.sign-up-btn(@bgcolor) {
+  .flex(center);
+  align-items: center;
+  width: 82.5%;
+  height: 43px;
+  color: white;
+  background: @bgcolor;
+  border-radius: 10px;
+}
+
+.mobile-content-section(@width: 100%) {
+  width: @width;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// STRETCH ***************
+
+.scale(@scale) {
+  transform: scale(@scale);
+}
